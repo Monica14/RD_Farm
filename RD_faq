@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+
+
+</script>
+<style type="text/css">
+<!--
+#panel,#flip
+{
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#flipy
+{
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#panel
+{
+padding:50px;
+display:none;
+}
+body {
+	background-image: url(w5.jpg);
+	background-repeat: no-repeat;
+}
+
+#Layer31 {	position:absolute;
+	left:99px;
+	top:1px;
+	width:1042px;
+	height:84px;
+	z-index:1;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+	border-radius: 20px;
+	background-color: #99CC00;
+}
+#Layer43 {	position:absolute;
+	left:29px;
+	top:8px;
+	width:82px;
+	height:62px;
+	z-index:10;
+}
+.style2 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+#Layer44 {	position:absolute;
+	left:132px;
+	top:30px;
+	width:140px;
+	height:41px;
+	z-index:11;
+}
+.style4 {font-size: 18px;
+	color: #FFFFFF;
+}
+#Layer47 {position:absolute;
+	left:532px;
+	top:33px;
+	width:376px;
+	height:34px;
+	z-index:12;
+}
+#Layer1 {
+	position:absolute;
+	left:106px;
+	top:88px;
+	width:1020px;
+	height:590px;
+	z-index:2;
+	background-color: #CCCCCC;
+}
+#Layer2 {
+	position:absolute;
+	left:253px;
+	top:99px;
+	width:259px;
+	height:128px;
+	z-index:3;
+	
+}
+.style5 {
+	font-size: 24px;
+	font-weight: bold;
+}
+#Layer3 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:805px;
+	height:109px;
+	z-index:4;
+}
+#Layer4 {
+	position:absolute;
+	left:717px;
+	top:97px;
+	width:331px;
+	height:186px;
+	z-index:4;
+}
+#Layer5 {
+	position:absolute;
+	left:214px;
+	top:307px;
+	width:834px;
+	height:3px;
+	z-index:5;
+	background-color: #999999;
+}
+#Layer6 {
+	position:absolute;
+	left:217px;
+	top:321px;
+	width:498px;
+	height:342px;
+	z-index:6;
+}
+#Layer7 {
+	position:absolute;
+	left:237px;
+	top:333px;
+	width:470px;
+	height:129px;
+	z-index:7;
+	visibility: visible;
+	float:left;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#Layer8 {
+	position:absolute;
+	left:246px;
+	top:381px;
+	width:530px;
+	height:150px;
+	z-index:8;
+}
+#Layer9 {
+	position:absolute;
+	left:245px;
+	top:383px;
+	width:529px;
+	height:159px;
+	z-index:8;
+}
+#Layer10 {
+	position:absolute;
+	left:254px;
+	top:386px;
+	width:72px;
+	height:21px;
+	z-index:9;
+}
+#Layer11 {
+	position:absolute;
+	left:263px;
+	top:388px;
+	width:112px;
+	height:23px;
+	z-index:10;
+}
+#Layer12 {
+	position:absolute;
+	left:284px;
+	top:185px;
+	width:197px;
+	height:75px;
+	z-index:8;
+}
+#Layer13 {
+	position:absolute;
+	left:741px;
+	top:320px;
+	width:307px;
+	height:335px;
+	z-index:8;
+	background-color: #999999;
+}
+#Layer14 {
+	position:absolute;
+	left:233px;
+	top:481px;
+	width:472px;
+	height:156px;
+	z-index:9;
+}
+#Layer15 {
+	position:absolute;
+	left:240px;
+	top:538px;
+	width:458px;
+	height:52px;
+	z-index:10;
+}
+#Layer16 {
+	position:absolute;
+	left:243px;
+	top:471px;
+	width:299px;
+	height:30px;
+	z-index:11;
+}
+#Layer17 {
+	position:absolute;
+	left:246px;
+	top:596px;
+	width:154px;
+	height:34px;
+	z-index:12;
+}
+#Layer18 {
+	position:absolute;
+	left:725px;
+	top:382px;
+	width:334px;
+	height:290px;
+	z-index:13;
+	background-color: #FFFFFF;
+}
+#Layer19 {
+	position:absolute;
+	left:246px;
+	top:505px;
+	width:128px;
+	height:29px;
+	z-index:14;
+}
+#Layer20 {
+	position:absolute;
+	left:239px;
+	top:481px;
+	width:440px;
+	height:165px;
+	z-index:14;
+}
+#Layer21 {
+	position:absolute;
+	left:241px;
+	top:495px;
+	width:462px;
+	height:153px;
+	z-index:14;
+}
+-->
+</style>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>   
+    $(function() {
+         $( "#calendar" ).datepicker();   
+    }); 
+</script>
+  <style type="text/css">
+<!--
+#Layer22 {
+	position:absolute;
+	left:725px;
+	top:349px;
+	width:323px;
+	height:31px;
+	z-index:15;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+	background-color: #666666;
+}
+.style6 {color: #CCCCCC}
+.style7 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: italic;
+}
+#Layer23 {
+	position:absolute;
+	left:703px;
+	top:35px;
+	width:1px;
+	height:33px;
+	z-index:16;
+	background-color: #000000;
+}
+#Layer24 {
+	position:absolute;
+	left:796px;
+	top:37px;
+	width:1px;
+	height:31px;
+	z-index:17;
+	background-color: #000000;
+}
+#Layer25 {
+	position:absolute;
+	left:899px;
+	top:35px;
+	width:1px;
+	height:32px;
+	z-index:18;
+	background-color: #000000;
+}
+#Layer26 {
+	position:absolute;
+	left:972px;
+	top:34px;
+	width:1px;
+	height:34px;
+	z-index:19;
+	background-color: #000000;
+}
+-->
+  </style>
+</head>
+
+<body>
+<?php
+$val =false;
+if(isset($_POST['post']))
+{
+$con = mysql_connect("localhost","root","");
+mysql_select_db("foming");
+$pn=$_POST["pmn"];
+$ptext=$_POST["ptxt"];
+/*$dt=strtotime($_POST["date"]);
+$d=date('yyyy-mm-dd',$dt);
+//$dt=$_POST["date"]*/
+
+$sql="INSERT INTO faq(name,comment,Date) VALUES ('$pn','$ptext',CURDATE())";
+
+if(mysql_query($sql))
+{
+echo "Post Uploaded";
+}
+else
+{
+echo "No Record";
+}
+
+mysql_close($con);
+}
+/*else
+{
+echo "Comment Cannnot be blank";
+}*/
+
+
+
+?>
+<?php
+$val =false;
+if(isset($_POST['reply']))
+{
+$con = mysql_connect("localhost","root","");
+mysql_select_db("foming");
+$pn=$_POST['cmnt'];
+$n=$_POST['nm'];
+
+$sql="INSERT INTO replyt(comment,name,Date) VALUES ('$pn','$n',CURDATE())";
+
+if(mysql_query($sql))
+{
+echo "";
+}
+else
+{
+echo "No Record";
+}
+
+mysql_close($con);
+}
+/*else
+{
+echo "Comment Cannnot be blank";
+}*/
+
+
+
+?>
+<div id="Layer1">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<div class="style5" id="Layer2"><img src="Investor-FAQ.JPG" width="275" height="178" /></div>
+<div id="Layer4"><form id="form2" name="form2" method="post" >
+  <table width="331" height="187" border="0" bordercolor="#000000">
+    <tr>
+      <td width="175">Enter Your Name: </td>
+      <td width="146">Enter Date : </td>
+    </tr>
+    <tr>
+      <td><input name="pmn" type="text" id="pmn" /></td>
+      <td><input type="text" name="date" id="calendar"/></td>
+    </tr>
+    
+    <tr>
+      <td>Comment : </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><textarea name="ptxt"></textarea></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><input name="post" type="submit" id="post" value="Post"/></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>  
+  </form>
+</div>
+
+<div id="Layer5"></div>
+<div id="Layer6">
+  <p>
+    
+  </p>
+</div>
+
+<div id="Layer7" style="overflow-x:hidden alighn="right;">
+<?php 
+$conn = mysql_connect("localhost","root","");
+                 mysql_select_db("foming");
+				 $row ="SELECT * FROM faq";
+				 $row1 = mysql_query($row);
+				 while($result=mysql_fetch_array($row1))				
+			{  	     			     
+			    		         
+				        echo $result["date"];
+						echo '<div id="Layer5">'.'</div>
+						
+
+<div id="flipy">'.$result["name"].':'.$result["comment"].'</div> ';          
+			
+			
+                       
+						
+                    }
+					/*echo '<div id="panel">
+  <textarea name="cmnt" cols="35" rows="6"></textarea>
+  <input name="Reply" type="submit" id="Reply" value="Reply">
+</div>';*/
+                    mysql_close($conn);
+            ?></div>
+
+
+
+
+<div id="Layer18">
+<marquee direction="up"><?php 
+$conn = mysql_connect("localhost","root","");
+                 mysql_select_db("foming");
+				 $row ="SELECT * FROM replyt";
+				 $row1 = mysql_query($row);
+				 while($result=mysql_fetch_array($row1))				
+			{  
+			    
+				
+				         
+                         		       
+						echo "<table ><tr>";
+						echo "<td>".$result["Date"]."</td>";
+						echo "</tr>";
+						echo "<tr>";
+                        echo "<td>".$result["name"]."=>>"."</td>"; 				
+						
+                        echo "<td>".$result["comment"]."</td>";
+						echo "</tr>";
+						echo "</table>";				
+						                 
+                       
+						
+                    }
+                    mysql_close($conn);
+            ?></marquee></div>
+
+<div id="Layer21">
+  <form id="form1" name="form1" method="post" action="">
+    <table width="471" height="176" bordercolor="#333333">
+      <tr>
+        <th width="108" scope="col">&nbsp;</th>
+        <th width="351" scope="col"><div align="left">Reply To Post </div></th>
+      </tr>
+      <tr>
+        <td>Name : </td>
+        <td><label>
+          <input name="nm" type="text" id="nm" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>Message : </td>
+        <td><label>
+          <textarea name="cmnt" id="cmnt"></textarea>
+        </label></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><label>
+          <input name="reply" type="submit" id="reply" value="Reply" />
+        </label></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div id="Layer31">
+  <div id="Layer43"><img src="../logo_461032_web.jpg" width="89" height="64" /></div>
+  <div class="style2" id="Layer44">R.D.Farming</div>
+  <div id="Layer47">
+     <table width="494" height="34" border="0">
+    <tr>
+      <td width="78"><span class="style4"><a href="home1.php">Home</a></span></td>
+      <td width="89"><span class="style4"><a href="aboutus.php">AboutUs</a></span></td>
+      <td width="96"><span class="style4"><a href="RD_investor.php">Investors</a></span></td>
+      <td width="69"><span class="style12"><a href="RD_faq.php">FAQ</a></span></td>
+      <td width="140"><span class="style4"> <a href="contactus.php">ContactUs</a></span></td>
+    </tr>
+  </table>
+  </div>
+  <div id="Layer10"></div>
+  <div id="layer"></div>
+  <div id="layer2"></div>
+</div>
+<div id="Layer22">
+  <div align="center" class="style6">
+  Reply To Post 
+  </div>
+</div>
+<div id="Layer23"></div>
+<div id="Layer24"></div>
+<div id="Layer25"></div>
+<div id="Layer26"></div>
+</body>
+</html>
