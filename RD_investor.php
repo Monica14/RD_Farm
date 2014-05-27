@@ -344,14 +344,24 @@ if (empty($_POST["name"]))
 
 if($value)
 {
-mysql_connect("localhost","root","");//database connection
-mysql_select_db("foming");
+$conn=mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");//database connection
+mysql_select_db("monsad10_foming");
  
 $order = "INSERT INTO invest
 			(Name, email,city,amount,addr,gender,mob_no)
 			VALUES
 			('$name','$email','$city','$amount','$address','$gender','$mob')";
-			$result = mysql_query($order);	//order executes
+			$result = mysql_query($order,);	//order executes
+$stmt = $conn->prepare("INSERT INTO invest
+			(Name, email,city,amount,addr,gender,mob_no)
+			VALUES
+			(:name,:email,:city,:amount,:address,:gender,:mob)");
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':name', $name);
+
 if($result){
 	//echo("<br>Input data is succeed");
 	//header("Location:isrt.php");
@@ -421,10 +431,10 @@ function test_input($data)
   <div align="center" class="style7">Interested User</div>
 </div>
 <div id="Layer6"><marquee direction="up"> <?php 
-$conn = mysql_connect("localhost","root","");
-                 mysql_select_db("foming");
+$conn = mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");
+        mysql_select_db("monsad10_foming");
 				 $row ="SELECT * FROM invest";
-				 $row1 = mysql_query($row);
+				 $row1 = mysql_query($row,$conn);
 				 while($result=mysql_fetch_array($row1))				
 			{  	     			     
 			    
@@ -481,10 +491,10 @@ $conn = mysql_connect("localhost","root","");
 </div>
 <?php
 
-$conn=mysql_connect("localhost","root","");//database connection
-mysql_select_db("foming");
+$conn=mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");
+mysql_select_db("monsad10_foming");
 $qry="SELECT * FROM admin WHERE user_id='Dinesh_Gupta'";
-$row1 = mysql_query($qry);
+$row1 = mysql_query($qry,$conn);
 if($result=mysql_fetch_array($row1))
 {
 if(isset($_POST["Submit"]))
