@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
+<title>RD Investor</title>
 <style>
 body {
 	background-image: url(w5.jpg);
@@ -347,20 +347,23 @@ if($value)
 $conn=mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");//database connection
 mysql_select_db("monsad10_foming");
  
-$order = "INSERT INTO invest
+/*$order = "INSERT INTO invest
 			(Name, email,city,amount,addr,gender,mob_no)
 			VALUES
 			('$name','$email','$city','$amount','$address','$gender','$mob')";
-			$result = mysql_query($order,);	//order executes
+			$result = mysql_query($order,);	//order executes*/
 $stmt = $conn->prepare("INSERT INTO invest
 			(Name, email,city,amount,addr,gender,mob_no)
 			VALUES
 			(:name,:email,:city,:amount,:address,:gender,:mob)");
 $stmt->bindParam(':name', $name);
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':name', $name);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':city', $city);
+$stmt->bindParam(':amount', $amount);
+$stmt->bindParam(':address', $address);
+$stmt->bindParam(':gender', $gender);
+$stmt->bindParam(':mob', $mob);
+$result = $stmt->execute();
 
 if($result){
 	//echo("<br>Input data is succeed");
