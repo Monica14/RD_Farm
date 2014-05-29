@@ -326,7 +326,7 @@ if (empty($_POST["name"]))
 	   if(isset($_POST['submit'])) {
      
         // check reCAPTCHA information
-        require_once('../project/recaptchalib.php');
+        require_once('../recaptchalib.php');
          
         $privatekey = "6LeELfASAAAAAH0Nianb6Sk9TB48RJCqbEhTiJVe";
         $resp = recaptcha_check_answer ($privatekey,
