@@ -39,8 +39,8 @@
 	color: #FFFFFF;
 }
 #Layer47 {	position:absolute;
-	left:648px;
-	top:34px;
+	left:541px;
+	top:28px;
 	width:387px;
 	height:34px;
 	z-index:12;
@@ -118,8 +118,45 @@
 	height:60px;
 	z-index:6;
 }
+#Layer10 {
+	position:absolute;
+	left:750px;
+	top:256px;
+	width:259px;
+	height:42px;
+	z-index:7;
+	background-color: #669933;
+}
+#Layer11 {
+	position:absolute;
+	left:750px;
+	top:301px;
+	width:258px;
+	height:262px;
+	z-index:8;
+	background-color: #CC9933;
+}
+#Layer12 {
+	position:absolute;
+	left:731px;
+	top:252px;
+	width:3px;
+	height:329px;
+	z-index:9;
+	background-color: #999999;
+}
+#Layer13 {
+	position:absolute;
+	left:774px;
+	top:255px;
+	width:211px;
+	height:32px;
+	z-index:10;
+}
+.style5 {font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #000000; }
 -->
 </style>
+
 </head>
 
 <body>
@@ -259,7 +296,7 @@ $value = "true";
      // check if name only contains letters and whitespace
      if (!preg_match("/^[1-9][0-9]*$/",$part))
        {
-	    
+
         //$ptErr = "Only numbers are allowed";
 		$value = false;
 	    $ptErr = "Only numbers are allowed";
@@ -276,7 +313,36 @@ mysql_close($conn);
 
 ?>
 </div>
-<div id="Layer7"><img src="thankyou.jpg" width="217" height="232" /></div>
+
 <div id="Layer9"><a href="RD_investor.php"><img src="back.jpg" width="100" height="100" /></a></div>
+<div id="Layer10"></div>
+<div id="Layer11" onMouseOver="document.getElementById('us').stop();" onMouseOut="document.getElementById('us').start();"><marquee id="us" direction="up" ><?php 
+$conn = mysql_connect("localhost","root","");
+                 mysql_select_db("foming");
+				 $row ="SELECT * FROM invest";
+				 $row1 = mysql_query($row);
+				 
+				 while($result=mysql_fetch_array($row1))				
+			{  	     			     
+			    
+				
+				         
+                         echo '<img src="user.jpg" width="62" height="39">'; 
+						 echo "<table>";
+				         echo "<tr>";			       
+						
+                        echo "<td>"."Name:" .$result["Name"]."</td>";			
+						
+                        echo "<td>"."(" .$result["mob_no"].")"."</td>";
+						echo "</tr>";
+						echo "</table>";				
+						               
+                       
+						
+                    }
+                    mysql_close($conn);
+            ?></marquee></div>
+<div id="Layer12"></div>
+<div class="style5" id="Layer13">Interested Partners </div>
 </body>
 </html>
