@@ -40,8 +40,8 @@ $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465; // or 587
 $mail->IsHTML(true);
-$mail->Username = "mssecure14@gmail.com";
-$mail->Password = "mebcghcxrxmgyego ";
+$mail->Username = "mssadafule@gmail.com";
+$mail->Password = "zjoknsckquljxsod";
 $mail->SetFrom("mssecure14@gmail.com");
 $mail->Subject = "New Partner";
 $mail->Body = "Thank you For your interest."."<br>"."Regards"."<br>"."Dinesh Gupta";
