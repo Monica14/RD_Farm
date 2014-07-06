@@ -10,7 +10,6 @@
 }
 -->
 </style>
-<div id="Layer1"><a href="last_least.php"><img src="back.jpg" width="63" height="65" /></a></div>
 <?php
 //the example of inserting data with variable from HTML form
 //input.php
@@ -20,6 +19,7 @@ $sql = "SELECT * FROM invest";
 $row = mysql_query($sql);
 if($row)
 {
+$var = false;
 $rslt=mysql_fetch_array($row);
 if($rslt)
 {
@@ -53,7 +53,23 @@ $mail->AddAddress($eml);
 	echo "Mailer Error: " . $mail->ErrorInfo;
 }
 else{
+    $part=$_POST['pt'];
+	$nam=$rslt["Name"];;
 	echo "Successfully Submited confirmation on your mail";
+	$order = "INSERT INTO partner
+			(mn,pt)
+			VALUES
+			('$nam','$part')";
+			$result = mysql_query($order);
+			
+			if($result)
+			{
+			include 'aboutus.php';
+			}	
+			else
+			{
+			echo "Error Occured";
+			}	
 }
 
 }
