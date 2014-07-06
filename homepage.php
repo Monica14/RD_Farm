@@ -423,8 +423,8 @@ body {
 }
 #Layer47 {
 	position:absolute;
-	left:743px;
-	top:36px;
+	left:920px;
+	top:34px;
 	width:410px;
 	height:34px;
 	z-index:12;
@@ -470,8 +470,8 @@ body {
 }
 #Layer52 {
 	position:absolute;
-	left:904px;
-	top:39px;
+	left:1168px;
+	top:37px;
 	width:2px;
 	height:32px;
 	z-index:17;
@@ -479,8 +479,8 @@ body {
 }
 #Layer53 {
 	position:absolute;
-	left:1003px;
-	top:40px;
+	left:1072px;
+	top:36px;
 	width:2px;
 	height:32px;
 	z-index:18;
@@ -504,8 +504,8 @@ body {
 	background-color: #333333;}
 #Layer56 {
 	position:absolute;
-	left:807px;
-	top:37px;
+	left:984px;
+	top:35px;
 	width:2px;
 	height:32px;
 	z-index:19;
@@ -524,7 +524,7 @@ body {
 }
 #Layer58 {
 	position:absolute;
-	left:87px;
+	left:75px;
 	top:110px;
 	width:262px;
 	height:30px;
@@ -616,7 +616,7 @@ body {
 	position:absolute;
 	left:1091px;
 	top:110px;
-	width:272px;
+	width:261px;
 	height:34px;
 	z-index:29;
 	background-color: #666666;
@@ -716,19 +716,18 @@ function changeimage(every_seconds){
 <div id="Layer43"><img src="logo_461032_web.jpg" width="87" height="73" /></div>
 <div class="style2" id="Layer44">R.D.Farming</div>
 <div id="Layer47">
-  <table width="494" height="34" border="0">
+  <table width="397" height="34" border="0">
     <tr>
-      <td width="78"><span class="style4"><a href="homepage.php">Home</a></span></td>
-      <td width="89"><span class="style4"><a href="aboutus.php">AboutUs</a></span></td>
-      <td width="96"><span class="style4"><a href="RD_investor.php">Investors</a></span></td>
-      <td width="69"><span class="style12"><a href="RD_faq.php">FAQ</a></span></td>
-      <td width="140"><span class="style4"> <a href="contactus.php">ContactUs</a></span></td>
+      <td width="79"><span class="style4"><a href="homepage.php">Home</a></span></td>
+      <td width="100"><span class="style4"><a href="aboutus.php">AboutUs</a></span></td>
+      <td width="108"><span class="style4"><a href="RD_investor.php">Investors</a></span></td>
+      <td width="189"><span class="style12"><a href="RD_faq.php">FAQ</a></span></td>
+     
     </tr>
   </table>
 </div>
 <div id="Layer52"></div>
 <div id="Layer53"></div>
-<div id="Layer54"></div>
 <div id="Layer55"></div>
 <div id="Layer56"></div>
 <div id="Layer57"></div>
@@ -763,7 +762,7 @@ function changeimage(every_seconds){
     <li class="style12"> Each Partners are valuable to us. </li>
   </ul>
 </div>
-<div id="Layer65"><img src="flogs.jpg" width="269" height="217" id="myimage" /></div>
+<div id="Layer65"><img src="flogs.jpg" width="262" height="217" id="myimage" /></div>
 <div class="style12" id="Layer66">
   <h2 align="center">&nbsp;</h2>
 </div>
