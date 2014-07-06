@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+z<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>RD Investor</title>
+<title>Untitled Document</title>
 <style>
 body {
 	background-image: url(w5.jpg);
@@ -42,7 +42,7 @@ body {
 	z-index:11;
 }
 #Layer47 {position:absolute;
-	left:526px;
+	left:596px;
 	top:34px;
 	width:384px;
 	height:34px;
@@ -135,8 +135,8 @@ body {
 }
 #Layer9 {
 	position:absolute;
-	left:697px;
-	top:36px;
+	left:768px;
+	top:38px;
 	width:1px;
 	height:36px;
 	z-index:10;
@@ -144,7 +144,7 @@ body {
 }
 #Layer10 {
 	position:absolute;
-	left:798px;
+	left:861px;
 	top:38px;
 	width:1px;
 	height:34px;
@@ -153,8 +153,8 @@ body {
 }
 #Layer11 {
 	position:absolute;
-	left:889px;
-	top:37px;
+	left:966px;
+	top:36px;
 	width:1px;
 	height:32px;
 	z-index:12;
@@ -201,7 +201,7 @@ function changeimage(every_seconds){
       <td width="89"><span class="style4"><a href="aboutus.php">AboutUs</a></span></td>
       <td width="96"><span class="style4"><a href="RD_partner.php">Investors</a></span></td>
       <td width="69"><span class="style12"><a href="RD_faq.php">FAQ</a></span></td>
-      <td width="140"><span class="style4"> <a href="contactus.php">ContactUs</a></span></td>
+      <td width="140"><span class="style4"> <a href="contactus.php"></a></span></td>
     </tr>
   </table>
   </div>
@@ -323,48 +323,17 @@ if (empty($_POST["name"]))
    else
      {$gender = test_input($_POST["gender"]);
 	  }
-	   if(isset($_POST['submit'])) {
-     
-        // check reCAPTCHA information
-        require_once('../recaptchalib.php');
-         
-        $privatekey = "6LeELfASAAAAAH0Nianb6Sk9TB48RJCqbEhTiJVe";
-        $resp = recaptcha_check_answer ($privatekey,
-                                    $_SERVER["REMOTE_ADDR"],
-                                    $_POST["recaptcha_challenge_field"],
-                                    $_POST["recaptcha_response_field"]);
-         
-        // if CAPTCHA is correctly entered!                       
-        if (!($resp->is_valid)) {
-          $cpErr= "CAPTCHA entries are incorrect";  
-		  $value=false;   
-			                
-        } 
-    }
-
+	  
 if($value)
 {
-$conn=mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");//database connection
-mysql_select_db("monsad10_foming");
+mysql_connect("localhost","root","");//database connection
+mysql_select_db("foming");
  
-/*$order = "INSERT INTO invest
+$order = "INSERT INTO invest
 			(Name, email,city,amount,addr,gender,mob_no)
 			VALUES
 			('$name','$email','$city','$amount','$address','$gender','$mob')";
-			$result = mysql_query($order,);	//order executes*/
-$stmt = $conn->prepare("INSERT INTO invest
-			(Name, email,city,amount,addr,gender,mob_no)
-			VALUES
-			(:name,:email,:city,:amount,:address,:gender,:mob)");
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':city', $city);
-$stmt->bindParam(':amount', $amount);
-$stmt->bindParam(':address', $address);
-$stmt->bindParam(':gender', $gender);
-$stmt->bindParam(':mob', $mob);
-$result = $stmt->execute();
-
+			$result = mysql_query($order);	//order executes
 if($result){
 	//echo("<br>Input data is succeed");
 	//header("Location:isrt.php");
@@ -421,23 +390,19 @@ function test_input($data)
    <input type="radio" name="gender" value="female">Female
    <input type="radio" name="gender" value="male">Male
    <span class="error">* <?php echo $genderErr;?></span></td></tr><tr><td>
-   <br><br><?php
-          require_once('../project/recaptchalib.php');
-          $publickey = "6LeELfASAAAAAAbqBbyLH-M3E5LZNWG_UUb-ya33";
-          echo recaptcha_get_html($publickey);
-        ?><?php echo $cpErr;?></td></tr><tr><td>
+   <br><br></td></tr><tr><td>
 
    <input type="submit" name="submit" value="Submit"></td></tr></table> 
 </form>
 </div>
 <div class="style6" id="Layer5">
-  <div align="center" class="style7">Interested User</div>
+  <div align="center" class="style7">Subscribed User</div>
 </div>
 <div id="Layer6"><marquee direction="up"> <?php 
-$conn = mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");
-        mysql_select_db("monsad10_foming");
+$conn = mysql_connect("localhost","root","");
+                 mysql_select_db("foming");
 				 $row ="SELECT * FROM invest";
-				 $row1 = mysql_query($row,$conn);
+				 $row1 = mysql_query($row);
 				 while($result=mysql_fetch_array($row1))				
 			{  	     			     
 			    
@@ -494,10 +459,10 @@ $conn = mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");
 </div>
 <?php
 
-$conn=mysql_connect("198.23.57.16:3306","monsad10_foming","rdfarm");
-mysql_select_db("monsad10_foming");
-$qry="SELECT * FROM admin WHERE user_id='Dinesh_Gupta'";
-$row1 = mysql_query($qry,$conn);
+$conn=mysql_connect("localhost","root","");//database connection
+mysql_select_db("foming");
+$qry="SELECT * FROM admin WHERE user_id='rd_dinesh@rdfarming.org'";
+$row1 = mysql_query($qry);
 if($result=mysql_fetch_array($row1))
 {
 if(isset($_POST["Submit"]))
@@ -517,6 +482,5 @@ mysql_close($conn);
 <div id="Layer9"></div>
 <div id="Layer10"></div>
 <div id="Layer11"></div>
-<div id="Layer12"></div>
 </body>
 </html>
